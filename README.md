@@ -3,7 +3,6 @@
 **Three projects in C and Linux system administration.**
 
 ![Rank](https://img.shields.io/badge/42%20Rank-01-5c6ac4?style=for-the-badge)
-![Score](https://img.shields.io/badge/Score-350%2F350-2ea44f?style=for-the-badge)
 ![Time](https://img.shields.io/badge/Estimated%20time-160%20hours-007ec6?style=for-the-badge)
 
 ---
@@ -79,4 +78,4 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 \
 ./gnl
 ```
 
-The included `main.c` reads from `banana.txt`. Change `BUFFER_SIZE` to try different read sizes.
+The included `main.c` reads from `text.txt`. Change `BUFFER_SIZE` to try different read sizes.
