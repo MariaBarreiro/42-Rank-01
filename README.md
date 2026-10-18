@@ -1,54 +1,77 @@
-# 42 — Rank 01
+# 🎓 42 — Rank 01
 
-Rank 01 of the 42 curriculum: three projects focused on C fundamentals and Linux system administration.
+**Three projects in C and Linux system administration.**
 
-## Projects
+![Rank](https://img.shields.io/badge/42%20Rank-01-5c6ac4?style=for-the-badge)
+![Score](https://img.shields.io/badge/Score-350%2F350-2ea44f?style=for-the-badge)
+![Time](https://img.shields.io/badge/Estimated%20time-160%20hours-007ec6?style=for-the-badge)
 
-| Project | Grade | Estimated time | Focus |
+---
+
+## 📚 Projects
+
+| Project | Grade | Time | Main topic |
 |---|---:|---:|---|
-| [ft_printf](https://github.com/MariaBarreiro/42_Printf) | 100/100 | ~55 hours | Recreating `printf` and working with variadic functions |
-| [Born2beroot](https://github.com/MariaBarreiro/42_Born_2_be_Root) | 125/125 | ~50 hours | Virtualization, Linux setup, and system administration |
-| [get_next_line](https://github.com/MariaBarreiro/42_GetNextLine) | 125/125 | ~55 hours | Reading files one line at a time |
+| 🖨️ [ft_printf](https://github.com/MariaBarreiro/42_Printf) | **100/100** | ~55 h | Variadic functions |
+| 🖥️ [Born2beroot](https://github.com/MariaBarreiro/42_Born_2_be_Root) | **125/125** | ~50 h | Virtualization and Linux |
+| 📄 [get_next_line](https://github.com/MariaBarreiro/42_GetNextLine) | **125/125** | ~55 h | Reading files line by line |
 
-**Total: 350/350 · about 160 hours**
+---
 
-## Projects and what I learned
+## 🖨️ ft_printf
 
-### ft_printf
+> Recreate a useful subset of C’s `printf` function.
 
-Recreates a useful subset of the standard C `printf` function.
+![Grade](https://img.shields.io/badge/Grade-100%2F100-brightgreen?style=flat-square)
+![Time](https://img.shields.io/badge/Time-~55%20hours-blue?style=flat-square)
 
-- **Grade:** 100/100
-- **Time:** About 55 hours
-- **I learned:** How variadic functions work, how to process format specifiers, and how to split a larger C program into reusable functions.
+**What I learned**
+- How variadic functions work
+- How to parse format specifiers and handle different data types
+- How to organize reusable C functions
 
-**Compile the library:**
+**Compile**
 
 ```sh
 make
 ```
 
-This creates `libftprintf.a`. To remove object files, run `make clean`; to remove the object files and library, run `make fclean`.
+This creates `libftprintf.a`. Run `make clean` to remove object files, or `make fclean` to remove the object files and library.
 
-### Born2beroot
+---
 
-Introduces virtualization by setting up and securing a Linux server in a virtual machine.
+## 🖥️ Born2beroot
 
-- **Grade:** 125/125
-- **Time:** About 50 hours
-- **I learned:** Linux system administration, virtual machines, disk partitioning with LVM and encryption, user and password policies, SSH, firewall configuration, `sudo`, and system monitoring.
+> Set up and secure a Linux server inside a virtual machine.
 
-**How to run it:** This project is a virtual machine setup rather than a compiled program. See the [project README](https://github.com/MariaBarreiro/42_Born_2_be_Root) for the Debian/Rocky setup and configuration details.
+![Grade](https://img.shields.io/badge/Grade-125%2F125-brightgreen?style=flat-square)
+![Time](https://img.shields.io/badge/Time-~50%20hours-blue?style=flat-square)
 
-### get_next_line
+**What I learned**
+- Linux system administration and virtualization
+- LVM partitioning and disk encryption
+- User, password, and `sudo` policies
+- SSH, firewall configuration, and system monitoring
 
-Implements a function that reads and returns one line at a time from a file descriptor.
+**Run**
 
-- **Grade:** 125/125
-- **Time:** About 55 hours
-- **I learned:** How to manage file descriptors, read input in buffers, preserve leftover data between calls, and handle memory while building strings. The bonus version also explores reading from multiple file descriptors.
+This project is a virtual machine setup, rather than a compiled program. See the [project README](https://github.com/MariaBarreiro/42_Born_2_be_Root) for the Debian/Rocky setup and configuration details.
 
-**Compile and run the included test program:**
+---
+
+## 📄 get_next_line
+
+> Write a function that returns one line at a time from a file descriptor.
+
+![Grade](https://img.shields.io/badge/Grade-125%2F125-brightgreen?style=flat-square)
+![Time](https://img.shields.io/badge/Time-~55%20hours-blue?style=flat-square)
+
+**What I learned**
+- How to read input in buffers and preserve leftover data between calls
+- How to manage file descriptors and dynamic memory
+- How to support multiple file descriptors in the bonus version
+
+**Compile and run the included test**
 
 ```sh
 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 \
@@ -56,4 +79,4 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 \
 ./gnl
 ```
 
-The included `main.c` reads from `banana.txt`. Change `BUFFER_SIZE` to test different read sizes.
+The included `main.c` reads from `banana.txt`. Change `BUFFER_SIZE` to try different read sizes.
